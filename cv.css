@@ -18,4 +18,9 @@ hr{
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    width: 100%;
+}
+.date{
+    display: flex;
+    align-self: flex-end;
 }
