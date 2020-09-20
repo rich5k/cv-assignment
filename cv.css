@@ -24,3 +24,7 @@ hr{
     display: flex;
     align-self: flex-end;
 }
+.location{
+    display: flex;
+    align-self: flex-end;
+}
