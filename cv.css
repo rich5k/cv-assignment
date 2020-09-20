@@ -10,3 +10,7 @@ hr{
     display: block;
     width: 100%;
 }
+.headings{
+    display: flex;
+    align-self: flex-start;
+}
