@@ -4,5 +4,5 @@ const address= document.querySelector(".address");
 address.innerHTML=localStorage.getItem("address");
 const email= document.querySelector(".email");
 email.innerHTML=localStorage.getItem("email");
-// const number= document.querySelector(".number");
-// number.innerHTML=localStorage.getItem("textvalue");
+const number= document.querySelector(".number");
+number.innerHTML=localStorage.getItem("phone");

@@ -14,13 +14,13 @@
         <div class="form-contents">
             <img src="ashesi-logo2.png" alt="">
             <h1>Fill in details for your CV</h1>
-            <form action="cv.html" onsubmit="formValid(event)" method="get">
+            <form action="cv.html" onsubmit="formValid(event)">
                 <label for="fname">First Name: </label>
-                <input type="text" id="fname" name="fname"><br><br>
+                <input type="text" id="fname" name="fname" autocomplete="off"><br><br>
                 <label for="mname">Middle Name: </label>
-                <input type="text" id="mname" name="mname"><br><br>
+                <input type="text" id="mname" name="mname" autocomplete="off"><br><br>
                 <label for="lname">Last Name: </label>
-                <input type="text" id="lname" name="lname"><br><br>
+                <input type="text" id="lname" name="lname" autocomplete="off"><br><br>
                 <p class="nameCheck">Name</p>
                 <label for="gender">Gender</label>
                 <select id = "gender">
@@ -28,11 +28,11 @@
                     <option value = "2">Female</option>
                 </select> <br><br>
                 <label for="phoneNumber">Phone Number: </label>
-                <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+                <input type="text" id="phoneNumber" name="phoneNumber" autocomplete="off"><br><br>
                 <label for="email">Email: </label>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" autocomplete="off"><br><br>
                 <label for="address">Address: </label>
-                <textarea rows="3" cols="30" name="address" id="address"></textarea><br><br>
+                <textarea rows="3" cols="30" name="address" id="address" autocomplete="off"></textarea><br><br>
                 <!-- <span class="submit"><button><a href="cv.html">Submit</a> </button></span> -->
                 <input type="submit" value="Submit" onclick="sendvalues();">
             </form>

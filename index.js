@@ -48,6 +48,7 @@ storeLname.addEventListener('input', letter =>{
 fullName= fname+mname+lname;
 
 const address= document.querySelector("#address").value;
+const phoneNum= document.querySelector("#phoneNumber").value;
 console.log(address);
 const email= document.querySelector("#email").value;
 console.log(email);
@@ -60,10 +61,14 @@ function sendaddress(){
 function sendemail(){
     localStorage.setItem("email",email);
 }
+function sendphone(){
+    localStorage.setItem("phone",phoneNum);
+}
 function sendvalues(){
     sendnames();
     sendaddress();
     sendemail();
+    sendphone();
     return false;
 }
 
@@ -111,11 +116,32 @@ function validateAddress(e){
       }
       
 }
+function validatePhone(e){
+    if (phoneNum == "") {
+        alert("Phone number must be filled out");
+        alert(phoneNum);
+        e.preventDefault();
+        return false;
+      }
+      else{
+          if(isNaN(phoneNum)){
+            alert("Phone number must be a number");
+            alert(phoneNum);
+            e.preventDefault();
+            return false;
+          }
+          else{
+            return true;
+          }
+         
+      }
+      
+}
 
 function formValid(e) {
     // var x = document.forms["myForm"]["fname"].value;
     // e.preventDefault();
-    if(!(validateFname(e)&& validateMname(e) && validateLname(e)&&validateAddress(e))){
+    if(!(validateFname(e)&& validateMname(e) && validateLname(e)&&validateAddress(e)&&validatePhone(e))){
         e.preventDefault();
     }
     // alert(address);
