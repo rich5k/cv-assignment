@@ -47,15 +47,21 @@ storeLname.addEventListener('input', letter =>{
 fullName= fname+mname+lname;
 
 const address= document.querySelector("#address").value;
-console.log(address)
+console.log(address);
+const email= document.querySelector("#email").value;
+console.log(email);
 function sendnames(){
     localStorage.setItem("textvalue",fullName);
 }
 function sendaddress(){
     localStorage.setItem("address",address);
 }
+function sendemail(){
+    localStorage.setItem("email",email);
+}
 function sendvalues(){
     sendnames();
     sendaddress();
+    sendemail();
     return false;
 }
