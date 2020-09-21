@@ -2,10 +2,12 @@ const storeFname = document.querySelector("#fname");
 const storeMname = document.querySelector("#mname");
 const storeLname = document.querySelector("#lname");
 const nameCheck = document.querySelector(".nameCheck");
+
 var fullName= "";
 var fname="";
 var mname="";
 var lname="";
+console.log(storeFname);
 storeFname.addEventListener('input', letter =>{
     fname= letter.target.value;
     if(mname.length!=0){
@@ -46,5 +48,6 @@ fullName= fname+mname+lname;
 
 function sendvalues(){
     localStorage.setItem("textvalue",fullName);
+    
     return false;
 }
