@@ -14,6 +14,8 @@ a{
     background-color: white;
     margin: 7% auto;
     padding: 10%;
+    display: flex;
+    flex-direction: column;
     /* fill-opacity: 0.2; */
 }
 .form-container{
@@ -25,4 +27,8 @@ a{
     width: 700px;
     height: 700px;
     margin: 20%;
+}
+.submit{
+    display: flex;
+    align-self: flex-end;
 }
