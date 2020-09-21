@@ -10,3 +10,9 @@ body{
 a{ 
     text-decoration: none;
 }
+.form-contents{
+    background-color: white;
+    margin: 7% auto;
+    padding: 10%;
+    /* fill-opacity: 0.2; */
+}
