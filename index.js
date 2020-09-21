@@ -100,13 +100,24 @@ function validateLname(e){
       }
       
 }
+function validateAddress(e){
+    if (address == "") {
+        alert("Address must be filled out");
+        e.preventDefault();
+        return false;
+      }
+      else{
+          return true;
+      }
+      
+}
 
 function formValid(e) {
     // var x = document.forms["myForm"]["fname"].value;
     // e.preventDefault();
-    if(!(validateFname(e)&& validateMname(e) && validateLname(e))){
+    if(!(validateFname(e)&& validateMname(e) && validateLname(e)&&validateAddress(e))){
         e.preventDefault();
     }
-    
+    // alert(address);
     return false;
   } 
