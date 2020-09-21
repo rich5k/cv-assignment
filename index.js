@@ -7,7 +7,8 @@ var fullName= "";
 var fname="";
 var mname="";
 var lname="";
-console.log(storeFname);
+// console.log(storeFname);
+
 storeFname.addEventListener('input', letter =>{
     fname= letter.target.value;
     if(mname.length!=0){
@@ -65,3 +66,47 @@ function sendvalues(){
     sendemail();
     return false;
 }
+
+function validateFname(e){
+    if (fname == "") {
+        alert("First name must be filled out");
+        e.preventDefault();
+        return false;
+      }
+      else{
+        return true;
+    }
+}
+
+function validateMname(e){
+    if (mname == "") {
+        alert("Middle name must be filled out");
+        e.preventDefault();
+        return false;
+      }
+      else{
+        return true;
+    }
+      
+}
+function validateLname(e){
+    if (lname == "") {
+        alert("Last name must be filled out");
+        e.preventDefault();
+        return false;
+      }
+      else{
+          return true;
+      }
+      
+}
+
+function formValid(e) {
+    // var x = document.forms["myForm"]["fname"].value;
+    // e.preventDefault();
+    if(!(validateFname(e)&& validateMname(e) && validateLname(e))){
+        e.preventDefault();
+    }
+    
+    return false;
+  } 
