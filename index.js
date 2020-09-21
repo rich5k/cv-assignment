@@ -46,8 +46,10 @@ storeLname.addEventListener('input', letter =>{
 })
 fullName= fname+mname+lname;
 
-function sendvalues(){
+function sendnames(){
     localStorage.setItem("textvalue",fullName);
-    
+}
+function sendvalues(){
+    sendnames();
     return false;
 }
