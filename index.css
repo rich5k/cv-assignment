@@ -32,3 +32,25 @@ a{
     display: flex;
     align-self: flex-end;
 }
+.btn{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    padding: 0px;
+  
+    color: #fbfafa;
+    font-size: 20px;
+    text-transform: uppercase;
+    /* text-decoration: none;
+    text-align: center; */
+    line-height: 50px;
+  
+    border: 2px solid #171717;
+    background: black;
+}  
+.btn:hover{
+    color: #f3f3f3;
+    background-position: 0% 50%;
+    border-width: 10px;
+    box-shadow: 3px 3px 6px 6px rgba(0, 0, 0, 0.5);
+  }
