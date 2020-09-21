@@ -16,3 +16,13 @@ a{
     padding: 10%;
     /* fill-opacity: 0.2; */
 }
+.form-container{
+    display: flex;
+    margin: 7% 50%;
+    padding-right: 30%;
+}
+.form-image img{
+    width: 700px;
+    height: 700px;
+    margin: 20%;
+}
