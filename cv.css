@@ -7,6 +7,7 @@ body{
     flex-direction: column;
     font-size: 14.5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 20px;
 }
 .name{
     font-size: 14px;
@@ -52,4 +53,7 @@ hr{
     /* align-self: flex-end; */
     margin-left: 57%;
     padding: 0px;
+}
+ul{
+    margin-top: -1%;
 }
