@@ -44,9 +44,22 @@ storeMname.addEventListener('input', letter =>{
 storeLname.addEventListener('input', letter =>{
     lname=letter.target.value.toUpperCase();
     // nameCheck.textContent=lname+" "+fullName;
-    if(lname.length!=0){
-        fullName= fullName[lname.length-2]+lname[lname.length-1]+" "+fullName.slice(lname.length-1,fullName.length);
-        nameCheck.textContent=fullName;
+    var lLen= lname.length;
+    var FLen =fullName.length;
+    if(lLen-1!=0){
+        if(lLen-2==0){
+            fullName= fullName[lLen-2]+lname[lLen-1]+fullName.slice(lLen-1,FLen.length);
+            nameCheck.textContent=fullName;
+            console.log(lLen);
+            console.log("Checking here:"+fullName[lLen-2]);
+        }
+        else{
+            fullName= fullName.slice(0,lLen-1)+lname[lLen-1]+fullName.slice(lLen-1,FLen.length);
+            nameCheck.textContent=fullName;
+            console.log(lLen);
+            console.log("Checking here:"+fullName.slice(0,lLen-1));
+
+        }
     }
     else{
         fullName=lname+ " "+ fullName;
@@ -136,7 +149,7 @@ function validateLname(e){
 function validateAddress(e){
     if (address == "") {
         console.log(address);
-        alert("Address must be filled out"+address);
+        alert("Address must be filled out");
         e.preventDefault();
         return false;
       }
