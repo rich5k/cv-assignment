@@ -11,8 +11,8 @@ var lname="";
 
 storeFname.addEventListener('input', letter =>{
     fname= letter.target.value;
-    if(mname.length!=0){
-        fullName= fname+ " "+ mname;
+    if(mname.length!=0 && lname.length!=0){
+        fullName= lname+" "+fname+ " "+ mname;
         nameCheck.textContent=fullName;
     }
     else{
@@ -25,24 +25,34 @@ storeFname.addEventListener('input', letter =>{
 
 storeMname.addEventListener('input', letter =>{
     mname=letter.target.value;
-
-    if(mname[mname.length-1]==fullName[fullName.length-1]){
-        fullName=fullName+ mname[mname.length-1];
-        nameCheck.textContent=fullName;
+    fullName=fname+ " "+ mname;
+    nameCheck.textContent=fullName;
+    // if((mname[mname.length-1]==fullName[fullName.length-1]){
+    //     fullName=fullName+ mname[mname.length-1];
+    //     nameCheck.textContent=fullName;
         
-    }
-    else{
-        fullName=fname+ " "+ mname;
-        nameCheck.textContent=fullName;
+    // }
+    // else{
+    //     fullName=fname+ " "+ mname;
+    //     nameCheck.textContent=fullName;
 
-    }
+    // }
     console.log(fullName);
 })
 // fullName= fullName+newName;
 
 storeLname.addEventListener('input', letter =>{
     lname=letter.target.value;
-    nameCheck.textContent=lname+" "+fullName+" "+mname;
+    // nameCheck.textContent=lname+" "+fullName;
+    if(lname.length!=0){
+        fullName= fullName[lname.length-2]+lname[lname.length-1]+" "+fullName.slice(lname.length-1,fullName.length);
+        nameCheck.textContent=fullName;
+    }
+    else{
+        fullName=lname+ " "+ fullName;
+        nameCheck.textContent=fullName;
+
+    }
     console.log(fullName);
 })
 fullName= fname+mname+lname;
@@ -66,9 +76,9 @@ function sendphone(){
 }
 function sendvalues(){
     sendnames();
-    sendaddress();
     sendemail();
     sendphone();
+    sendaddress();
     return false;
 }
 
@@ -107,7 +117,7 @@ function validateLname(e){
 }
 function validateAddress(e){
     if (address == "") {
-        alert("Address must be filled out");
+        alert("Address must be filled out"+address);
         e.preventDefault();
         return false;
       }
