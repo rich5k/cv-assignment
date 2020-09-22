@@ -10,7 +10,7 @@ var lname="";
 // console.log(storeFname);
 
 storeFname.addEventListener('input', letter =>{
-    fname= letter.target.value;
+    fname= letter.target.value.toUpperCase();
     if(mname.length!=0 && lname.length!=0){
         fullName= lname+" "+fname+ " "+ mname;
         nameCheck.textContent=fullName;
@@ -24,7 +24,7 @@ storeFname.addEventListener('input', letter =>{
 })
 
 storeMname.addEventListener('input', letter =>{
-    mname=letter.target.value;
+    mname=letter.target.value.toUpperCase();
     fullName=fname+ " "+ mname;
     nameCheck.textContent=fullName;
     // if((mname[mname.length-1]==fullName[fullName.length-1]){
@@ -42,7 +42,7 @@ storeMname.addEventListener('input', letter =>{
 // fullName= fullName+newName;
 
 storeLname.addEventListener('input', letter =>{
-    lname=letter.target.value;
+    lname=letter.target.value.toUpperCase();
     // nameCheck.textContent=lname+" "+fullName;
     if(lname.length!=0){
         fullName= fullName[lname.length-2]+lname[lname.length-1]+" "+fullName.slice(lname.length-1,fullName.length);
@@ -57,10 +57,28 @@ storeLname.addEventListener('input', letter =>{
 })
 fullName= fname+mname+lname;
 
-const address= document.querySelector("#address").value;
-const phoneNum= document.querySelector("#phoneNumber").value;
-console.log(address);
-const email= document.querySelector("#email").value;
+const storeAddress= document.querySelector("#address");
+var address="";
+storeAddress.addEventListener('input', letter =>{
+    address= letter.target.value;
+    
+    // console.log(address);
+})
+const storePhone= document.querySelector("#phoneNumber");
+var phoneNum="";
+storePhone.addEventListener('input', letter =>{
+    phoneNum= letter.target.value;
+    
+    console.log(phoneNum);
+})
+// console.log(address);
+const storeEmail= document.querySelector("#email");
+var email="";
+storeEmail.addEventListener('input', letter =>{
+    email= letter.target.value;
+    
+    console.log(email);
+})
 console.log(email);
 function sendnames(){
     localStorage.setItem("textvalue",fullName);
@@ -69,7 +87,7 @@ function sendaddress(){
     localStorage.setItem("address",address);
 }
 function sendemail(){
-    localStorage.setItem("email",email);
+    localStorage.setItem("femail",email);
 }
 function sendphone(){
     localStorage.setItem("phone",phoneNum);
@@ -117,6 +135,7 @@ function validateLname(e){
 }
 function validateAddress(e){
     if (address == "") {
+        console.log(address);
         alert("Address must be filled out"+address);
         e.preventDefault();
         return false;

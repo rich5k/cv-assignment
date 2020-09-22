@@ -3,6 +3,6 @@ name.innerHTML=localStorage.getItem("textvalue");
 const address= document.querySelector(".address");
 address.innerHTML=localStorage.getItem("address");
 const email= document.querySelector(".email");
-email.innerHTML=localStorage.getItem("email");
+email.innerHTML=localStorage.getItem("femail");
 const number= document.querySelector(".number");
 number.innerHTML=localStorage.getItem("phone");
