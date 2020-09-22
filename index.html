@@ -14,24 +14,33 @@
         <div class="form-contents">
             <img src="ashesi-logo2.png" alt="">
             <h1>Fill in details for your CV</h1>
+            <!-- Form for CV -->
             <form action="cv.html" onsubmit="formValid(event)">
+                <!-- First Name -->
                 <label for="fname">First Name: </label>
                 <input type="text" id="fname" name="fname" autocomplete="off"><br><br>
+                <!-- Middle Name -->
                 <label for="mname">Middle Name: </label>
                 <input type="text" id="mname" name="mname" autocomplete="off"><br><br>
+                <!-- Last Name -->
                 <label for="lname">Last Name: </label>
                 <input type="text" id="lname" name="lname" autocomplete="off"><br><br>
+                <!-- Gender -->
                 <label for="gender">Gender</label>
                 <select id = "gender">
                     <option value = "1">Male</option>
                     <option value = "2">Female</option>
                 </select> <br><br>
+                <!-- Phone Number -->
                 <label for="phoneNumber">Phone Number: </label>
                 <input type="text" id="phoneNumber" name="phoneNumber" autocomplete="off"><br><br>
+                <!-- Email -->
                 <label for="email">Email: </label>
                 <input type="email" id="email" name="email" autocomplete="off"><br><br>
+                <!-- Address -->
                 <label for="address">Address: </label>
                 <textarea rows="3" cols="30" name="address" id="address" autocomplete="off"></textarea><br><br>
+                <!-- Submit -->
                 <input class="btn" type="submit" value="Submit" onclick="sendvalues();">
             </form>
     
